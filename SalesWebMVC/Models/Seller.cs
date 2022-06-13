@@ -8,9 +8,9 @@ namespace SalesWebMVC.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Emai { get; set; }
+        public string Email { get; set; }
         public double BaseSalary { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime BirthDate { get; set; }
         public Department Department { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
@@ -18,13 +18,13 @@ namespace SalesWebMVC.Models
         {
         }
 
-        public Seller(int id, string name, string emai, double baseSalary, DateTime birthday, Department department)
+        public Seller(int id, string name, string email, double baseSalary, DateTime birthdate, Department department)
         {
             Id = id;
             Name = name;
-            Emai = emai;
+            Email = email;
             BaseSalary = baseSalary;
-            Birthday = birthday;
+            BirthDate = birthdate;
             Department = department;
         }
 
