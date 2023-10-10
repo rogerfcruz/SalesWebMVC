@@ -21,8 +21,8 @@ namespace SalesWebMVC.Data
                 return; // O banco já está populado.
             }
 
-            Department d1 = new Department(1, "ELetrônicos");
-            Department d2 = new Department(2, "ELetrodomésticos");
+            Department d1 = new Department(1, "Eletrônicos");
+            Department d2 = new Department(2, "Eletrodomésticos");
             Department d3 = new Department(3, "Telefonia");
             Department d4 = new Department(4, "Cama, Mesa e Banho");
 
