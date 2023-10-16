@@ -33,9 +33,16 @@ namespace SalesWebMVC.Services
 
         public void Remove(int id)
         {
-            var obj = _context.Seller.Find(id);
-            _context.Seller.Remove(obj);
-            _context.SaveChanges();
+            try
+            {
+                var obj = _context.Seller.Find(id);
+                _context.Seller.Remove(obj);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateException e)
+            {
+                throw new IntegrityException(e.Message);
+            }
         }
 
         public void Update(Seller obj)
